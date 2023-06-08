@@ -38,7 +38,6 @@ header {
   background: url("/assets/background.png");
   background-size: cover;
   background-position: center;
-  height: 100vh;
 }
 
 #home {
@@ -149,6 +148,8 @@ header {
   .home-container {
     max-width: 70%;
     flex-direction: row;
+    height: 100vh;
+
   }
 
 
