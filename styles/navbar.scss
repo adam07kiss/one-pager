@@ -1,0 +1,116 @@
+@mixin navbarTheme() {
+  list-style: none;
+  display: inline-block;
+  margin: 20px;
+
+  a {
+    color: gray;
+    text-decoration: none;
+    font-size: 15px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a:not(none) {
+  display: none;
+}
+
+.navbarDesktop a:not(none) {
+  display: none;
+}
+
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 13px 16px;
+    text-decoration: none;
+    font-family: system-ui;
+    font-size: 40px;
+    font-weight: 200;
+
+
+  }
+}
+
+.container {
+
+
+  button.icon {
+    background: #d8d8d8;
+    float: right;
+    display: block;
+    padding: 16px 17px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+  }
+}
+
+.navbar.responsive {
+  position: relative;
+  padding: 5rem 0;
+
+  a {
+    float: none;
+    display: flex;
+    align-items: center
+  }
+
+  .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+}
+
+.headerToggle.responsive {
+  background-color: white;
+}
+
+
+@media (min-width: 600px) {
+
+  .navbarDesktop {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    a {
+      float: left;
+      display: block;
+      color: gray;
+      text-align: center;
+      padding: 13px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    a:not(none) {
+      display: flex;
+    }
+  }
+
+  .navbar.responsive {
+    display: none;
+
+  }
+
+  .headerToggle.responsive {
+    background-color: transparent;
+  }
+
+
+
+}

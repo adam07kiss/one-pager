@@ -1,0 +1,184 @@
+@import "form", "navbar", "buttons";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+div, section, span, ul, li, a, header {
+  box-sizing: border-box;
+}
+
+
+header {
+  z-index: 1;
+  margin: 0 auto;
+  position: relative;
+  padding: 20px 20px;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row nowrap;
+
+  a {
+    color: #000;
+    text-decoration: none;
+    font-size: 35px;
+    font-weight: bold;
+  }
+}
+
+
+.home-main-container {
+  background: url("/assets/background.png");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+#home {
+  padding: 0 20px;
+  height: 100%;
+}
+
+.container {
+  max-width: 85%;
+  display: flex;
+  margin: 0 auto;
+  flex-flow: row wrap;
+  flex-direction: column;
+  flex: 1 1 auto;
+  justify-content: space-evenly;
+
+
+  .nav-menu-outer {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+
+    .title {
+      display: flex;
+      font-size: 25px;
+      align-items: flex-start;
+      font-family: system-ui;
+      flex-flow: row nowrap;
+    }
+
+
+    .nav-menu {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      justify-content: flex-end;
+      order: 3;
+      flex: 0 1 auto;
+
+      .fa {
+        color: gray;
+        font-size: 25px;
+      }
+
+    }
+
+
+  }
+
+}
+
+.toggleHamburger {
+  position: absolute;
+  right: 20px;
+  top: 32px;
+  color: gray;
+  font-size: 25px;
+}
+
+
+.home-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  flex-direction: column;
+  padding-top: 2.5rem;
+  padding-bottom: 3rem;
+}
+
+.item-container {
+  flex-flow: row wrap;
+  flex: 1 1 auto;
+  width: 100%;
+
+  h1 {
+    font-size: 48px;
+    text-align: center;
+    font-weight: 750;
+  }
+
+  h3 {
+    font-size: 21px;
+    text-align: center;
+    color: gray;
+    padding-top: 2.5rem;
+  }
+}
+
+
+@media (min-width: 600px) {
+
+  header {
+
+    a {
+      color: #000;
+      text-decoration: none;
+      font-size: 35px;
+      font-weight: bold;
+    }
+  }
+
+  .container {
+    max-width: 70%;
+  }
+
+  .home-container {
+    max-width: 70%;
+    flex-direction: row;
+  }
+
+
+  .item-container {
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: row;
+
+    h1 {
+      font-weight: 800;
+      font-size: 58px;
+      color: #252b42;
+      display: flex;
+      text-align: left;
+    }
+
+    h3 {
+      padding-top: 5%;
+      color: gray;
+      font-size: 24px;
+      font-weight: 100;
+      padding-bottom: 5%;
+    }
+
+  }
+
+  .homeButtons {
+    display: flex;
+    flex-direction: row;
+  }
+
+}
+
