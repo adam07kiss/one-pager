@@ -1,0 +1,118 @@
+@mixin textDesign() {
+  color: #737373;
+  font-family: $primary-font-family;
+}
+
+$primary-font-family: system-ui;
+
+#whyChooseUs {
+  padding: 50px 30px;
+  height: 100%;
+}
+
+.whyChooseUs-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.whyChooseUs-title-container {
+  padding: 40px 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  h2 {
+    font-size: 44px;
+    color: #252B42;
+    text-align: center;
+    font-weight: 750;
+    font-family: $primary-font-family;
+    padding: 0 40px;
+  }
+
+  p {
+    text-align: center;
+    @include textDesign;
+    padding: 20px 45px;
+
+  }
+
+}
+
+.whyChooseUs-card-container{
+  display: flex;
+  gap: 30px;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+
+.card-item-1, .card-item-2, .card-item-3{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 28px;
+  background-color: #D9EDFF;
+  border-radius: 10px;
+
+  ul{
+    background-color: white;
+    padding: 20px 40px;
+    border-radius: 10px;
+    border: 1px solid #A9D6FF;
+  }
+
+  h6{
+    @include textDesign;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  a{
+    font-family: $primary-font-family;
+    color: #ffa62b;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
+
+.card-item-title {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 15px;
+  h5 {
+    font-family: $primary-font-family;
+    color: #252B42;
+    font-size: 16px;
+    padding: 50px 0;
+  }
+
+  i{
+    background: white;
+    padding: 10px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 40px;
+    color: #FFA62B;
+    font-size: 25px;
+  }
+
+}
+
+
+@media (min-width: 600px) {
+
+
+  #whyChooseUs{
+    height: 70vh;
+
+  }
+}
