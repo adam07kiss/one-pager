@@ -1,4 +1,11 @@
-@import "form", "navbar", "buttons";
+@import "form", "navbar", "buttons", "homeScreen";
+
+@mixin textDesign() {
+  color: #737373;
+  font-family: $primary-font-family;
+}
+
+$primary-font-family: system-ui;
 
 * {
   margin: 0;
@@ -13,121 +20,114 @@ div, section, span, ul, li, a, header {
   box-sizing: border-box;
 }
 
-
-header {
-  z-index: 1;
-  margin: 0 auto;
-  position: relative;
-  padding: 20px 20px;
-  flex-direction: column;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-flow: row nowrap;
-
-  a {
-    color: #000;
-    text-decoration: none;
-    font-size: 35px;
-    font-weight: bold;
-  }
-}
-
-
-.home-main-container {
-  background: url("/assets/background.png");
-  background-size: cover;
-  background-position: center;
-}
-
-#home {
-  padding: 0 20px;
+#whyChooseUs {
+  padding: 50px 30px;
   height: 100%;
 }
 
-
-.home-container {
-  width: 100%;
+.whyChooseUs-container {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0 auto;
   flex-direction: column;
-  padding-top: 2.5rem;
-  padding-bottom: 3rem;
 }
 
-.item-container {
-  flex-flow: row wrap;
-  flex: 1 1 auto;
-  width: 100%;
+.whyChooseUs-title-container {
+  padding: 40px 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 
-  h1 {
-    font-size: 48px;
+  h2 {
+    font-size: 44px;
+    color: #252B42;
     text-align: center;
     font-weight: 750;
+    font-family: $primary-font-family;
+    padding: 0 40px;
   }
 
-  h3 {
-    font-size: 21px;
+  p {
     text-align: center;
-    color: gray;
-    padding-top: 2.5rem;
+    @include textDesign;
+    padding: 20px 45px;
+
   }
+
+}
+
+.whyChooseUs-card-container{
+  display: flex;
+  gap: 30px;
+    flex-flow: row wrap;
+  justify-content: center;
+}
+
+
+.card-item-1, .card-item-2, .card-item-3{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 28px;
+  background-color: #D9EDFF;
+  border-radius: 10px;
+
+  ul{
+    background-color: white;
+    padding: 20px 40px;
+    border-radius: 10px;
+    border: 1px solid #A9D6FF;
+  }
+
+  h6{
+    @include textDesign;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  a{
+    font-family: $primary-font-family;
+    color: #ffa62b;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
+
+.card-item-title {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 15px;
+  h5 {
+    font-family: $primary-font-family;
+    color: #252B42;
+    font-size: 16px;
+    padding: 50px 0;
+  }
+
+  i{
+    background: white;
+    padding: 10px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 40px;
+    color: #FFA62B;
+    font-size: 25px;
+  }
+
 }
 
 
 @media (min-width: 600px) {
 
-  header {
 
-    a {
-      color: #000;
-      text-decoration: none;
-      font-size: 35px;
-      font-weight: bold;
-    }
-  }
-
-  .home-inner-container {
-    max-width: 70%;
-  }
-
-  .home-container {
-    max-width: 70%;
-    flex-direction: row;
-    height: 100vh;
+  #whyChooseUs{
+    height: 70vh;
 
   }
-
-
-  .item-container {
-    display: flex;
-    flex-flow: row wrap;
-    flex-direction: row;
-
-    h1 {
-      font-weight: 800;
-      font-size: 58px;
-      color: #252b42;
-      display: flex;
-      text-align: left;
-    }
-
-    h3 {
-      padding-top: 5%;
-      color: gray;
-      font-size: 24px;
-      font-weight: 100;
-      padding-bottom: 5%;
-    }
-
-  }
-
-  .homeButtons {
-    display: flex;
-    flex-direction: row;
-  }
-
 }
-
