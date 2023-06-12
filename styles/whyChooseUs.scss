@@ -6,8 +6,11 @@
 $primary-font-family: system-ui;
 
 #whyChooseUs {
-  padding: 50px 30px;
-  height: 100%;
+  padding: 30px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .whyChooseUs-container {
@@ -21,22 +24,6 @@ $primary-font-family: system-ui;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-
-  h2 {
-    font-size: 44px;
-    color: #252B42;
-    text-align: center;
-    font-weight: 750;
-    font-family: $primary-font-family;
-    padding: 0 40px;
-  }
-
-  p {
-    text-align: center;
-    @include textDesign;
-    padding: 20px 45px;
-
-  }
 
 }
 
@@ -112,7 +99,7 @@ $primary-font-family: system-ui;
 
 
   #whyChooseUs{
-    height: 70vh;
-
+    height: 100vh;
+    padding: 0 30px;
   }
 }
