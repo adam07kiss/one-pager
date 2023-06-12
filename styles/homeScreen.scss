@@ -1,9 +1,4 @@
-@mixin textDesign() {
-  color: #737373;
-  font-family: $primary-font-family;
-}
-
-$primary-font-family: system-ui;
+@import "variables";
 
 
 header {
@@ -30,11 +25,13 @@ header {
   background: url("/assets/background.png");
   background-size: cover;
   background-position: center;
+
 }
 
 #home {
   padding: 0 30px;
   height: 100%;
+
 }
 
 
@@ -55,6 +52,7 @@ header {
   flex: 1 1 auto;
   width: 100%;
 
+
   h1 {
     font-size: 46px;
     color: #252B42;
@@ -71,9 +69,11 @@ header {
   }
 }
 
+@include sm {
 
-@media (min-width: 600px) {
+}
 
+@include md {
   header {
 
     a {
@@ -84,19 +84,15 @@ header {
     }
   }
 
-  .home-main-container{
-    flex-flow: row wrap;
-  }
 
   .home-inner-container {
     max-width: 70%;
   }
 
   .home-container {
-    max-width: 70%;
+    max-width: 100%;
     flex-direction: row;
-    height: 100vh;
-
+    height: 100%;
   }
 
 
@@ -132,3 +128,28 @@ header {
 
 }
 
+@include lg {
+  .home-inner-container {
+    max-width: 80%;
+  }
+
+  .home-container {
+    max-width: 80%;
+    flex-direction: row;
+    height: 100%;
+
+  }
+}
+
+@include xl {
+  .home-inner-container {
+    max-width: 70%;
+  }
+
+  .home-container {
+    max-width: 70%;
+    flex-direction: row;
+    height: 100vh;
+
+  }
+}

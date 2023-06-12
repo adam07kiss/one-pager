@@ -1,0 +1,67 @@
+
+@mixin sectionTitle() {
+  font-size: 44px;
+  color: #252B42;
+  text-align: center;
+  font-weight: 750;
+  font-family: $primary-font-family;
+  padding: 0 35px;
+}
+
+@mixin sectionParagraph() {
+  text-align: center;
+  @include textDesign;
+  padding: 20px 45px;
+}
+
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1440px;
+
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
+@mixin textDesign() {
+  color: #737373;
+  font-family: $primary-font-family;
+}
+
+$primary-font-family: system-ui;
+
+@mixin textDesign() {
+  color: #737373;
+  font-family: $primary-font-family;
+}
+
+$primary-font-family: system-ui;
