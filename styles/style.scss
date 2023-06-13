@@ -1,4 +1,4 @@
-@import "form", "navbar", "buttons", "homeScreen", "whyChooseUs","variables","videoEmbedding";
+@import "form", "navbar", "buttons", "homeScreen", "whyChooseUs", "variables", "videoEmbedding";
 
 
 * {
@@ -14,7 +14,7 @@ div, section, span, ul, li, a, header {
   box-sizing: border-box;
 }
 
-.why-choose-us-title-container, .video-embedding-title-container {
+.why-choose-us-title-container, .video-embedding-title-container{
   h2 {
     @include sectionTitle;
   }
@@ -22,4 +22,16 @@ div, section, span, ul, li, a, header {
   p {
     @include sectionParagraph;
   }
+}
+
+
+.card-item-1, .card-item-2, .card-item-3{
+  h6 {
+    @include card-h6;
+  }
+
+  a {
+    @include link;
+  }
+
 }

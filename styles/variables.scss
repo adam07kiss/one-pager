@@ -65,3 +65,18 @@ $primary-font-family: system-ui;
 }
 
 $primary-font-family: system-ui;
+
+
+@mixin link(){
+    font-family: $primary-font-family;
+    color: #ffa62b;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+@mixin card-h6(){
+  @include textDesign;
+  font-size: 14px;
+  font-weight: 500;
+}

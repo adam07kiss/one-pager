@@ -31,8 +31,8 @@
 .video-embedding-video-container video {
   top: 0;
   left: 0;
-  width: 90%;
-  height: 100%;
+  width: 80%;
+  height: 90%;
   margin: 0 auto;
   object-fit: cover;
 
@@ -40,12 +40,16 @@
 
 @include sm {
 
+  #video-embedding {
+    height: 100%;
+
+  }
 }
 
 @include md {
+
   #video-embedding {
     height: 100%;
-    background: linear-gradient(180deg, #F3F3F3 50vh, #16697A 50vh);
   }
 
   .video-embedding-container {
@@ -62,6 +66,7 @@
 @include lg {
   #video-embedding {
     height: 100%;
+    background: linear-gradient(180deg, #F3F3F3 55vh, #16697A 45vh);
   }
 
   .video-embedding-container {
@@ -70,9 +75,11 @@
   }
 }
 
+
 @include xl {
   #video-embedding {
     height: 100vh;
+
   }
 
   .video-embedding-container {
