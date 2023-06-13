@@ -48,7 +48,11 @@ header {
 }
 
 .home-item-container {
+  display: flex;
+  flex-direction: row;
   flex-flow: row wrap;
+  justify-content: center;
+
   flex: 1 1 auto;
   width: 100%;
 
@@ -85,28 +89,20 @@ header {
   }
 
 
-  .home-inner-container {
-    max-width: 70%;
-  }
-
   .home-container {
     max-width: 100%;
-    flex-direction: row;
     height: 100%;
   }
 
 
   .home-item-container {
-    display: flex;
-    flex-flow: row wrap;
-    flex-direction: row;
+
 
     h1 {
       font-weight: 800;
       font-size: 58px;
       color: #252b42;
       display: flex;
-      text-align: left;
     }
 
     h3 {
@@ -115,20 +111,26 @@ header {
       font-size: 24px;
       font-weight: 100;
       padding-bottom: 5%;
+    }
+
+  }
+
+
+}
+
+@include lg {
+  .home-item-container {
+justify-content: left;
+    h1 {
+      text-align: left;
+    }
+
+    h3 {
       text-align: left;
     }
 
   }
 
-  .homeButtons {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
-
-}
-
-@include lg {
   .home-inner-container {
     max-width: 80%;
   }
@@ -139,16 +141,29 @@ header {
     height: 100%;
 
   }
+
+  .home-buttons {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 @include xl {
+
+  .home-item-container {
+    display: flex;
+    flex-direction: column;
+    flex-flow: column wrap;
+    align-items: start;
+    width: 100%;
+  }
+
   .home-inner-container {
     max-width: 70%;
   }
 
   .home-container {
-    max-width: 70%;
-    flex-direction: row;
+    max-width: 80%;
     height: 100vh;
 
   }

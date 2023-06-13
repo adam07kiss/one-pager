@@ -1,14 +1,14 @@
 @import "variables";
 
-#whyChooseUs {
-  padding: 30px 30px;
+#why-choose-us {
+  padding: 30px 30px 70px 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.whyChooseUs-container {
+.why-choose-us-container {
   display: flex;
   flex-direction: column;
   min-height: 0;
@@ -18,26 +18,25 @@
 
 }
 
-.whyChooseUs-title-container {
+.why-choose-us-title-container {
   padding: 40px 0;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-
-
 }
 
-.whyChooseUs-card-container{
+.why-choose-us-card-container {
   display: flex;
   gap: 30px;
   flex-flow: row wrap;
   justify-content: center;
-
+  flex-direction: column;
+  align-items: center;
 }
 
 
-.card-item-1, .card-item-2, .card-item-3{
+.card-item-1, .card-item-2, .card-item-3 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -46,20 +45,20 @@
   background-color: #D9EDFF;
   border-radius: 10px;
 
-  ul{
+  ul {
     background-color: white;
     padding: 20px 40px;
     border-radius: 10px;
     border: 1px solid #A9D6FF;
   }
 
-  h6{
+  h6 {
     @include textDesign;
     font-size: 14px;
     font-weight: 500;
   }
 
-  a{
+  a {
     font-family: $primary-font-family;
     color: #ffa62b;
     text-decoration: none;
@@ -74,6 +73,7 @@
   align-items: center;
   justify-content: space-around;
   gap: 15px;
+
   h5 {
     font-family: $primary-font-family;
     color: #252B42;
@@ -81,7 +81,7 @@
     padding: 50px 0;
   }
 
-  i{
+  i {
     background: white;
     padding: 10px;
     border-radius: 50%;
@@ -97,31 +97,31 @@
 }
 
 
-@include sm{
-
+@include sm {
+  .why-choose-us-card-container {
+    display: flex;
+    gap: 30px;
+    flex-flow: row wrap;
+    justify-content: center;
+    flex-direction: row;
+  }
 }
 
 @include md {
-  #whyChooseUs{
+  #why-choose-us {
     height: 100%;
   }
 
-  .whyChooseUs-container{
+  .why-choose-us-container {
 
     max-width: 80%;
   }
 }
 
-@include lg{
-  #whyChooseUs{
-    height: 100%;
-  }
-
-  .whyChooseUs-container{
-    max-width: 80%;
-  }
+@include lg {
 }
 
-@include xl{
+@include xl {
+
 
 }

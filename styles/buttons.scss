@@ -14,11 +14,11 @@
 }
 
 
-.quoteBtn {
+.btn-blue {
   @include buttontheme;
 }
 
-.learnMoreBtn {
+.btn-bordered {
   @include buttontheme($theme: rgba(255, 255, 255, 0));
   border: 5px;
   margin-left: 8px;
@@ -27,7 +27,7 @@
 }
 
 
-.appointmentButton {
+.btn-orange {
   width: 248px;
   height: 60px;
   padding: 18px;
@@ -40,12 +40,12 @@
 
 }
 
-.homeButtons {
+.home-buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  gap: 20px;
+  gap: 10px;
   padding: 2.5rem 0;
 }
 
