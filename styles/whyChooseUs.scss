@@ -54,34 +54,34 @@
 
   }
 
-.card-item-title {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: space-around;
-  gap: 15px;
+  .card-item-title {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 15px;
 
-  h5 {
-    font-family: $primary-font-family;
-    color: #252B42;
-    font-size: 16px;
-    padding: 50px 0;
+    h5 {
+      font-family: $primary-font-family;
+      color: #252B42;
+      font-size: 16px;
+      padding: 50px 0;
+    }
+
+    i {
+      background: white;
+      padding: 10px;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      vertical-align: middle;
+      line-height: 40px;
+      color: #FFA62B;
+      font-size: 25px;
+    }
+
   }
-
-  i {
-    background: white;
-    padding: 10px;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 40px;
-    color: #FFA62B;
-    font-size: 25px;
-  }
-
-}
 
 }
 
