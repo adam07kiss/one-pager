@@ -1,4 +1,4 @@
-@import "form", "navbar", "buttons", "homeScreen", "whyChooseUs", "variables", "videoEmbedding", "testimonials";
+@import "form", "navbar", "buttons", "homeScreen", "whyChooseUs", "variables", "videoEmbedding", "testimonials", "meetOurTeam";
 
 
 * {
@@ -14,7 +14,7 @@ div, section, span, ul, li, a, header {
   box-sizing: border-box;
 }
 
-.why-choose-us-title-container, .video-embedding-title-container, .testimonials-title-container {
+.why-choose-us-title-container, .video-embedding-title-container, .testimonials-title-container,.meet-our-team-title-container {
   h2 {
     @include sectionTitle;
   }

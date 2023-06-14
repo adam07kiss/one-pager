@@ -1,0 +1,99 @@
+@import "variables";
+
+#meet-our-team {
+  padding: 30px 30px 70px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.meet-our-team-container {
+  display: flex;
+  flex-direction: column;
+
+
+}
+
+.meet-our-team-title-container {
+  padding: 40px 0;
+}
+
+.meet-our-team-card-container {
+  display: flex;
+  gap: 35px;
+  flex-flow: row wrap;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+
+  .meet-our-team-card-1, .meet-our-team-card-2, .meet-our-team-card-3 {
+    border: 1px solid lightgrey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 30px;
+
+
+    h5{
+      @include textDesign-darkBlue;
+      font-size: 18px;
+    }
+
+    h6 {
+      font-size: 14px;
+      @include textDesign-gray;
+    }
+
+    .meet-our-team-image {
+      padding-bottom: 20px;
+      object-fit: cover;
+      width: 300px;
+      height: 200px;
+    }
+
+    .meet-our-team-social-icons {
+      padding-bottom: 15px;
+      color: #00A0C1;
+      font-size: 25px;
+      word-spacing: 10px;
+    }
+
+  }
+
+
+}
+
+
+@include sm {
+  .meet-our-team-card-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    flex-direction: row;
+  }
+}
+
+@include md {
+  #meet-our-team {
+    height: 100%;
+  }
+
+  .meet-our-team-container {
+
+    min-width: 70%;
+  }
+}
+
+@include lg {
+  .meet-our-team-container {
+
+    min-width: 80%;
+  }
+}
+
+@include xl {
+
+
+}

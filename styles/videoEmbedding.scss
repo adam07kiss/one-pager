@@ -31,8 +31,8 @@
 .video-embedding-video-container video {
   top: 0;
   left: 0;
-  width: 80%;
-  height: 90%;
+  width: 70%;
+  height: 80%;
   margin: 0 auto;
   object-fit: cover;
 
@@ -70,7 +70,7 @@
   }
 
   .video-embedding-container {
-    max-width: 80%;
+    min-width: 80%;
 
   }
 }
@@ -83,6 +83,6 @@
   }
 
   .video-embedding-container {
-    max-width: 80%;
+    min-width: 80%;
   }
 }

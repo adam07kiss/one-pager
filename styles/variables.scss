@@ -1,17 +1,3 @@
-@mixin sectionTitle() {
-  font-size: 44px;
-  color: #252B42;
-  text-align: center;
-  font-weight: 750;
-  font-family: $primary-font-family;
-  padding: 0 35px;
-}
-
-@mixin sectionParagraph() {
-  text-align: center;
-  @include textDesign;
-  padding: 20px 45px;
-}
 
 $screen-sm-min: 576px;
 
@@ -51,14 +37,27 @@ $screen-xl-min: 1440px;
   }
 }
 
-@mixin textDesign() {
-  color: #737373;
+@mixin sectionTitle() {
+  font-size: 44px;
+  color: #252B42;
+  text-align: center;
+  font-weight: 750;
+  font-family: $primary-font-family;
+  padding: 0 35px;
+}
+
+@mixin sectionParagraph() {
+  text-align: center;
+  @include textDesign-gray;
+  padding: 20px 45px;
+}
+
+@mixin textDesign-darkBlue{
+  color: #252B42;
   font-family: $primary-font-family;
 }
 
-$primary-font-family: system-ui;
-
-@mixin textDesign() {
+@mixin textDesign-gray() {
   color: #737373;
   font-family: $primary-font-family;
 }
@@ -75,7 +74,7 @@ $primary-font-family: system-ui;
 }
 
 @mixin card-h6() {
-  @include textDesign;
+  @include textDesign-gray;
   font-size: 14px;
   font-weight: 500;
 }
