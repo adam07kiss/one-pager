@@ -1,15 +1,10 @@
+@import "variables";
+
 .form-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 40px;
-  gap: 40px;
-  background: #ffffff;
-  border-radius: 10px;
-  flex-basis: 50%;
-  flex: none;
-
-
+  @include formContainerDesign;
+  input, select{
+    padding: 5%;
+  }
   h3 {
     padding-top: 5%;
     color: black;
@@ -18,30 +13,8 @@
     padding-bottom: 5%;
   }
 
-  input, select {
-    background: #f9f9f9;
-    box-sizing: border-box;
-    width: 248px;
-    padding: 5%;
-    border: 1px solid #bdbdbd;
-    border-radius: 5px;
-  }
 }
 
 .form {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 5px;
-  font-weight: bold;
-  font-size: 15px;
-  font-family: sans-serif;
-
-  height: 369px;
-  background: #ffffff;
-  border-radius: 1px;
-  flex: none;
-  order: 1;
-  align-self: stretch;
-  flex-grow: 0;
+  @include formDesign;
 }

@@ -37,6 +37,23 @@ $screen-xl-min: 1440px;
   }
 }
 
+@mixin buttontheme($theme: #00a0c1) {
+  background: $theme;
+  border-radius: 999px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 28px;
+  outline: 0 solid #00a0c1;
+  padding: 10px 36px;
+  border: 0;
+  display: inline-grid;
+}
+
+
+
 @mixin sectionTitle() {
   font-size: 44px;
   color: #252B42;
@@ -92,5 +109,45 @@ $primary-font-family: system-ui;
 
   ul {
     color: #F3CD03;
+  }
+}
+
+
+@mixin formDesign($gapSize: 5px){
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: $gapSize;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: sans-serif;
+  height: 100%;
+  background: #ffffff;
+  border-radius: 1px;
+  flex: 1;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+
+
+@mixin formContainerDesign(){
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  gap: 40px;
+  background: #ffffff;
+  border-radius: 10px;
+  flex: none;
+
+  input, select {
+    background: #f9f9f9;
+    box-sizing: border-box;
+    min-height: 0;
+    width: 250px;
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
   }
 }
