@@ -41,6 +41,17 @@ div, section, span, ul, li, a, header {
   background-color: white;
 }
 
+ul.dashed {
+  list-style: none;
+  li:before {
+    content: '-';
+  }
+  li > * {
+    display: inline;
+    margin-left: 5px;
+  }
+}
+
 .why-choose-us-title-container, .video-embedding-title-container, .testimonials-title-container,.meet-our-team-title-container {
   h2 {
     @include sectionTitle;
