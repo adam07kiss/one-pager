@@ -6,8 +6,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 0;
-  min-width: 0;
 }
 
 .video-embedding-container {
@@ -26,22 +24,17 @@
   overflow: hidden;
   padding: 40px 0 10px 0;
 
-}
-
-.video-embedding-video-container video {
-  top: 0;
-  left: 0;
-  width: 70%;
-  height: 80%;
-  margin: 0 auto;
-  object-fit: cover;
-
+  video {
+    width: 100%;
+    max-height: 100%;
+    margin: 0 auto;
+    object-fit: cover;
+  }
 }
 
 @include sm {
 
   #video-embedding {
-    height: 100%;
 
   }
 }
@@ -49,13 +42,12 @@
 @include md {
 
   #video-embedding {
-    height: 100%;
+
   }
 
   .video-embedding-container {
-    min-width: 70%;
-  }
 
+  }
 
   .video-embedding-video-container {
     aspect-ratio: auto;
@@ -70,7 +62,6 @@
   }
 
   .video-embedding-container {
-    min-width: 80%;
 
   }
 }
@@ -78,11 +69,10 @@
 
 @include xl {
   #video-embedding {
-    height: 100vh;
-
+    min-height: 100vh;
   }
 
   .video-embedding-container {
-    min-width: 80%;
+
   }
 }

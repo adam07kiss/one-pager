@@ -36,7 +36,7 @@
   align-items: center;
 
 
-  .testimonials-card-1, .testimonials-card-2, .testimonials-card-3 {
+  .testimonials-card {
     @include testimonialCards;
 
     .testimonials-h6 {
@@ -50,12 +50,11 @@
       flex-flow: row wrap;
       align-items: center;
 
-
       img {
         border-radius: 50%;
         border: 1px solid gray;
         display: flex;
-
+        max-width: 50px;
       }
 
     }
