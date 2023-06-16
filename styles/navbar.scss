@@ -19,7 +19,7 @@
   display: none;
 }
 
-.navbarDesktop a:not(none) {
+.navbar-desktop a:not(none) {
   display: none;
 }
 
@@ -88,7 +88,7 @@
 
 }
 
-.toggleHamburger {
+.toggle-hamburger {
   position: absolute;
   right: 20px;
   top: 32px;
@@ -115,14 +115,17 @@
 
 }
 
-.headerToggle.responsive {
+.header-toggle.responsive {
   background-color: white;
 }
 
 
-@media (min-width: 600px) {
+@include sm {
 
-  .navbarDesktop {
+}
+@include md {
+
+  .navbar-desktop {
     overflow: hidden;
     display: flex;
     flex-direction: row;
@@ -148,7 +151,7 @@
 
   }
 
-  .headerToggle.responsive {
+  .header-toggle.responsive {
     background-color: transparent;
   }
 

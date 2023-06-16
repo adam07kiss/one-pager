@@ -1,25 +1,12 @@
-@mixin buttontheme($theme: #00a0c1) {
-  background: $theme;
-  border-radius: 999px;
-  box-sizing: border-box;
-  color: #ffffff;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 28px;
-  outline: 0 solid #00a0c1;
-  padding: 10px 36px;
-  border: 0;
-  display: inline-grid;
-}
+@import "variables";
 
 
-.quoteBtn {
+.btn-blue {
   @include buttontheme;
 }
 
-.learnMoreBtn {
-  @include buttontheme($theme: rgba(255, 255, 255, 0));
+.btn-bordered {
+  @include buttontheme($theme: #FFFFFF00);
   border: 5px;
   margin-left: 8px;
   color: #00a0c1;
@@ -27,7 +14,7 @@
 }
 
 
-.appointmentButton {
+.btn-orange {
   width: 248px;
   height: 60px;
   padding: 18px;
@@ -40,7 +27,7 @@
 
 }
 
-.homeButtons {
+.home-buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
