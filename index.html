@@ -11,9 +11,9 @@
 
 </head>
 <body>
-<div class="home-main-container">
+<section class="home-main-container">
     <header class="header-toggle" id="header-toggle">
-        <div class="home-inner-container">
+        <div class="container home-inner-container">
             <div class="nav-menu-outer">
                 <a href="#" class="title">Sprivaten</a>
                 <div class="nav-menu">
@@ -25,9 +25,9 @@
                     </nav>
                     <a href="#"><i class="fa fa-search"></i></a>
                     <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                    <a href="#" onclick="toggle()" class="toggle-hamburger"><i class="fa fa-bars"></i></a>
                 </div>
             </div>
-
 
             <nav class="navbar" id="navbar">
                 <a href="#home">Home</a>
@@ -35,14 +35,10 @@
                 <a href="#">Pricing</a>
                 <a href="#">Contact</a>
             </nav>
-
-
-            <a href="#" onclick="toggle()"><i class="toggle-hamburger fa fa-bars"></i></a>
         </div>
     </header>
-    <section id="home">
-
-        <div class="home-container">
+    <div id="home">
+        <div class="container home-container">
             <div class="home-item-container">
                 <h1>Drive More Customers Through Digital</h1>
                 <h3>We know how large objects will act, but things on a small scale.</h3>
@@ -55,27 +51,34 @@
             <div class="form-container">
                 <h3>Book Appointment</h3>
                 <div class="form">
-                    <label for="name">Name*</label><br>
-                    <input type="text" id="name" name="name">
-                    <label for="email">Email*</label><br>
-                    <input type="email" id="email" name="name" placeholder="example@gmail.com">
-                    <label for="dep">Department*</label><br>
-                    <select name="departments" id="dep">
-                        <option value="pleaseSelect">Please Select</option>
-                    </select>
-                    <label for="time">Time*</label><br>
-                    <select name="time" id="time">
-                        <option value="400available">4:00 Available</option>
-                    </select>
+                    <div class="form-group">
+                        <label for="name">Name*</label>
+                        <input type="text" id="name" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" name="name" placeholder="example@gmail.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="dep">Department*</label>
+                        <select name="departments" id="dep">
+                            <option value="pleaseSelect">Please Select</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Time*</label>
+                        <select name="time" id="time">
+                            <option value="400available">4:00 Available</option>
+                        </select>
+                    </div>
                 </div>
                 <button class="btn-orange">Book Appointment</button>
             </div>
         </div>
-    </section>
-
-</div>
+    </div>
+</section>
 <section id="why-choose-us">
-    <div class="why-choose-us-container">
+    <div class="container why-choose-us-container">
         <div class="why-choose-us-title-container">
             <h2>WHY CHOOSE US</h2>
             <p>Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian
@@ -268,7 +271,7 @@
                 </div>
                 <div class="contact-form">
                     <div class="contact-form-card-1">
-                        <input type="text"  placeholder="Full Name">
+                        <input type="text" placeholder="Full Name">
                         <input type="email" placeholder="example@gmail.com">
                     </div>
                     <div class="contact-form-card-2">

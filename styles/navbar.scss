@@ -1,15 +1,14 @@
 @import "variables";
 
-.navbar a:not(none) {
-  display: none;
-}
-
-.navbar-desktop a:not(none) {
-  display: none;
-}
-
-
 .navbar {
+  display: none;
+}
+
+.navbar-desktop {
+  display: none;
+}
+
+.navbar.show {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,24 +19,18 @@
     text-align: center;
     padding: 13px 16px;
     text-decoration: none;
-    font-family: system-ui;
     font-size: 40px;
     font-weight: 200;
-
-
   }
 }
 
-
 .home-inner-container {
-  max-width: 85%;
   display: flex;
   margin: 0 auto;
   flex-flow: row wrap;
   flex-direction: column;
   flex: 1 1 auto;
   justify-content: space-evenly;
-
 
   .nav-menu-outer {
     display: flex;
@@ -48,7 +41,6 @@
       display: flex;
       font-size: 25px;
       align-items: flex-start;
-      font-family: system-ui;
       flex-flow: row nowrap;
     }
 
@@ -65,52 +57,11 @@
         color: #737373;
         font-size: 25px;
       }
-
     }
-
-
   }
-
 }
 
-.toggle-hamburger {
-  position: absolute;
-  right: 20px;
-  top: 32px;
-  color: #737373;
-  font-size: 25px;
-}
-
-
-.navbar.responsive {
-  position: relative;
-  padding: 5rem 0;
-
-  a {
-    float: none;
-    display: flex;
-    align-items: center
-  }
-
-  .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-
-}
-
-.header-toggle.responsive {
-  background-color: white;
-}
-
-
-@include sm {
-
-}
-
-@include md {
-
+@include lg {
   .navbar-desktop {
     overflow: hidden;
     display: flex;
@@ -132,14 +83,7 @@
     }
   }
 
-  .navbar.responsive {
+  .toggle-hamburger {
     display: none;
-
   }
-
-  .header-toggle.responsive {
-    background-color: transparent;
-  }
-
-
 }

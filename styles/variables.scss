@@ -10,6 +10,10 @@ $screen-lg-min: 992px;
 // Large tablets and desktops
 $screen-xl-min: 1440px;
 
+$primary-color: #FFA62B;
+
+$primary-font-family: "Montserrat", sans-serif;
+
 @mixin sm {
   @media (min-width: #{$screen-sm-min}) {
     @content;
@@ -79,12 +83,9 @@ $screen-xl-min: 1440px;
   font-family: $primary-font-family;
 }
 
-$primary-font-family: system-ui;
-
-
 @mixin link() {
   font-family: $primary-font-family;
-  color: #ffa62b;
+  color: $primary-color;
   text-decoration: none;
   font-size: 14px;
   font-weight: 600;
@@ -112,7 +113,6 @@ $primary-font-family: system-ui;
   }
 }
 
-
 @mixin formDesign($gapSize: 5px){
   display: flex;
   flex-direction: column;
@@ -129,8 +129,6 @@ $primary-font-family: system-ui;
   align-self: stretch;
   flex-grow: 0;
 }
-
-
 
 @mixin formContainerDesign(){
   display: flex;

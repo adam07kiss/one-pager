@@ -1,4 +1,4 @@
-
+@import "variables";
 
 .btn-blue {
   @include buttontheme;
@@ -18,8 +18,8 @@
   height: 50px;
   padding: 18px;
   border-radius: 5px;
-  border: 1px solid #ffa62b;
-  background: #ffa62b;
+  border: 1px solid $primary-color;
+  background: $primary-color;
   color: white;
   order: 2;
   cursor: pointer;

@@ -1,6 +1,13 @@
-@import "form", "navbar", "buttons", "homeScreen", "whyChooseUs", "variables", "videoEmbedding",
-"testimonials", "meetOurTeam", "contact";
-
+@import "form";
+@import "navbar";
+@import "buttons";
+@import "homeScreen";
+@import "whyChooseUs";
+@import "variables";
+@import "videoEmbedding";
+@import "testimonials";
+@import "meetOurTeam";
+@import "contact";
 
 * {
   margin: 0;
@@ -8,11 +15,30 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: $primary-font-family;
 }
 
 div, section, span, ul, li, a, header {
   box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+}
+
+@include lg {
+  .container {
+    width: 960px;
+  }
+}
+@include xl {
+  .container {
+    width: 1140px;
+  }
+}
+
+.bg-white {
+  background-color: white;
 }
 
 .why-choose-us-title-container, .video-embedding-title-container, .testimonials-title-container,.meet-our-team-title-container {
