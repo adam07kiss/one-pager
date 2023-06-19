@@ -45,7 +45,6 @@ header {
     color: #252B42;
     text-align: center;
     font-weight: 750;
-    font-family: $primary-font-family;
   }
 
   h3 {
@@ -113,14 +112,5 @@ header {
   .home-buttons {
     display: flex;
     flex-direction: row;
-  }
-}
-
-@include xl {
-  .home-item-container {
-    display: flex;
-    flex-direction: column;
-    flex-flow: column wrap;
-    align-items: start;
   }
 }

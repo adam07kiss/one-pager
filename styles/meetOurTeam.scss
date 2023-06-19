@@ -1,99 +1,81 @@
 @import "variables";
 
-#meet-our-team {
+.meet-our-team {
   padding: 30px 30px 70px 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-.meet-our-team-container {
-  display: flex;
-  flex-direction: column;
 
 
-}
-
-.meet-our-team-title-container {
-  padding: 40px 0;
-}
-
-.meet-our-team-card-container {
-  display: flex;
-  gap: 35px;
-  flex-flow: row wrap;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-
-
-  .meet-our-team-card-1, .meet-our-team-card-2, .meet-our-team-card-3 {
-    border: 1px solid lightgrey;
+  &-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    line-height: 30px;
-
-
-    h5{
-      @include textDesign-darkBlue;
-      font-size: 18px;
-    }
-
-    h6 {
-      font-size: 14px;
-      @include textDesign-gray;
-    }
-
-    .meet-our-team-image {
-      padding-bottom: 20px;
-      object-fit: cover;
-      width: 300px;
-      height: 200px;
-    }
-
-    .meet-our-team-social-icons {
-      padding-bottom: 15px;
-      color: #00A0C1;
-      font-size: 25px;
-      word-spacing: 10px;
-    }
-
   }
 
+  &-title-container {
+    padding: 40px 0;
+  }
 
-}
-
-
-@include sm {
-  .meet-our-team-card-container {
+  &-card-container {
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
-    flex-direction: row;
-  }
-}
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-basis: 32%;
 
-@include md {
-  #meet-our-team {
-    height: 100%;
-  }
+    .meet-our-team-card {
+      border: 1px solid lightgrey;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 30px;
+      width: 328px;
+      height: 373px;
+      flex-basis: 32%;
 
-  .meet-our-team-container {
+      h5 {
+        @include textDesign-darkBlue;
+        font-size: 18px;
+      }
 
-    min-width: 70%;
+      h6 {
+        font-size: 14px;
+        @include textDesign-gray;
+      }
+
+      .meet-our-team-image {
+        padding-bottom: 20px;
+        //object-fit: contain;
+        object-fit: cover;
+        width: 328px;
+        height: auto;
+      }
+
+      .meet-our-team-social-icons {
+        padding-bottom: 15px;
+        color: #00A0C1;
+        font-size: 25px;
+        word-spacing: 10px;
+      }
+    }
   }
 }
 
 @include lg {
-  .meet-our-team-container {
+  .meet-our-team-card-container {
+    flex-direction: row;
+    gap: 0;
 
-    min-width: 80%;
+    .meet-our-team-card{
+      width: auto;
+      height: auto;
+
+      .meet-our-team-image{
+        width: 100%;
+      }
+    }
   }
-}
-
-@include xl {
-
-
 }

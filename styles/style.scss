@@ -8,6 +8,7 @@
 @import "testimonials";
 @import "meetOurTeam";
 @import "contact";
+@import "footer";
 
 
 * {
@@ -32,6 +33,7 @@ div, section, span, ul, li, a, header {
     width: 960px;
   }
 }
+
 @include xl {
   .container {
     width: 1140px;
@@ -44,24 +46,49 @@ div, section, span, ul, li, a, header {
 
 ul.dashed {
   list-style: none;
+
   li:before {
     content: '-';
   }
+
   li > * {
     display: inline;
     margin-left: 5px;
   }
 }
 
-.why-choose-us-title-container, .video-embedding-title-container, .testimonials-title-container,.meet-our-team-title-container {
-  h2 {
-    @include sectionTitle;
-  }
-
-  p {
-    @include sectionParagraph;
-  }
+.section-title {
+  font-size: 44px;
+  color: #252B42;
+  text-align: center;
+  font-weight: 750;
+  padding: 0 35px;
 }
+
+.section-paragraph {
+  text-align: center;
+  @include textDesign-gray;
+  padding: 20px 45px;
+}
+
+.form-home-select {
+  color: $secondary-color;
+}
+
+.form-select {
+  color: $placeholder-color;
+}
+
+
+//.why-choose-us-title-container, .video-embedding-title-container, .testimonials-title-container, .meet-our-team-title-container {
+//  h2 {
+//    @include ;
+//  }
+//
+//  p {
+//
+//  }
+//}
 
 
 .card-item-1, .card-item-2, .card-item-3, .testimonials-card-1, .testimonials-card-2, .testimonials-card-3 {

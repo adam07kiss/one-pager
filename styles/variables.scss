@@ -7,9 +7,14 @@ $screen-md-min: 768px;
 $screen-lg-min: 992px;
 
 // Large tablets and desktops
+
 $screen-xl-min: 1440px;
 
 $primary-color: #FFA62B;
+
+$secondary-color: #737373;
+
+$placeholder-color: #BDBDBD;
 
 $primary-font-family: "Montserrat", sans-serif;
 
@@ -55,63 +60,25 @@ $primary-font-family: "Montserrat", sans-serif;
   display: inline-grid;
 }
 
-@mixin sectionTitle() {
-  font-size: 44px;
-  color: #252B42;
-  text-align: center;
-  font-weight: 750;
-  font-family: $primary-font-family;
-  padding: 0 35px;
-}
-
-@mixin sectionParagraph() {
-  text-align: center;
-  @include textDesign-gray;
-  padding: 20px 45px;
-}
-
 @mixin textDesign-darkBlue {
   color: #252B42;
-  font-family: $primary-font-family;
 }
 
 @mixin textDesign-gray() {
   color: #737373;
-  font-family: $primary-font-family;
 }
 
-$primary-font-family: system-ui;
-
-@mixin link($color: #ffa62b) {
   @mixin link() {
-    font-family: $primary-font-family;
     color: $primary-color;
     text-decoration: none;
     font-size: 14px;
     font-weight: 600;
   }
-}
 
 @mixin card-h6() {
   @include textDesign-gray;
   font-size: 14px;
-  font-weight: 500;
-}
-
-@mixin testimonialCards() {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  line-height: 28px;
-  border-radius: 5px;
-  border: 1px solid lightgrey;
-  padding: 20px 0 20px 30px;
-  background: white;
-
-  ul {
-    color: #F3CD03;
-  }
+  font-weight: 600;
 }
 
 @mixin formDesign($gapSize: 5px) {
@@ -121,7 +88,6 @@ $primary-font-family: system-ui;
   gap: $gapSize;
   font-weight: bold;
   font-size: 15px;
-  font-family: sans-serif;
   height: 100%;
   background: #ffffff;
   border-radius: 1px;

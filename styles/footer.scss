@@ -1,116 +1,114 @@
 @import "variables";
 
-.footer-main-container {
-  background: #252B42;
-  width: 100%;
-}
-
-footer {
+.footer {
   padding: 0 30px;
-  height: 100%;
-}
+  background: #252B42;
 
-.footer-container {
-  display: flex;
-  flex-direction: column;
-
-}
-
-.footer-upper-container {
-  display: flex;
-  flex-direction: column;
-  padding: 40px 0;
-
-  h3 {
-    color: white;
-    font-family: $primary-font-family;
+  &-container {
+    display: flex;
+    flex-direction: column;
   }
 
-  .footer-social-icons {
+  &-upper-container {
+    display: flex;
+    flex-direction: column;
     padding: 40px 0;
 
-    @include socialIcons();
-
-    .fa-square-facebook {
-      color: #335BF5;
+    h3 {
+      color: white;
     }
 
-    .fa-instagram {
-      color: #E51F5A
-    }
+    .footer-social-icons {
+      padding: 40px 0;
+      @include socialIcons();
 
-    .fa-twitter {
-      color: #21A6DF
-    }
+      .fa-square-facebook {
+        color: #335BF5;
+      }
 
-    .fa-youtube {
-      color: #E42F08
-    }
-  }
-}
+      .fa-instagram {
+        color: #E51F5A
+      }
 
+      .fa-twitter {
+        color: #21A6DF
+      }
 
-.footer-middle-container {
-
-  display: flex;
-  flex-direction: column;
-  color: white;
-  padding: 50px 0;
-
-
-  .footer-info {
-    font-family: $primary-font-family;
-    display: flex;
-    flex-direction: column;
-    line-height: 30px;
-
-    h5 {
-      font-size: 16px;
-      font-weight: 800;
-      padding: 0 0 10px 0;
-    }
-
-    a {
-      @include link($color: white);
-    }
-  }
-
-  .footer-get-in-touch {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    align-items: flex-start;
-    font-family: $primary-font-family;
-
-    h5 {
-      font-size: 16px;
-      font-weight: 800;
-      padding: 0 0 10px 0;
-    }
-
-    .input-group {
-      border: 1px solid lightgray;
-      border-radius: 5px;
-
-
-      button {
-        background: #ffa62b;
-        font-family: $primary-font-family;
-        color: white;
-        cursor: pointer;
-
+      .fa-youtube {
+        color: #E42F08
       }
     }
-    p{
-      padding-top: 5px;
-      font-size: 10px;
+  }
+
+  &-middle-container {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 50px 0;
+
+    .footer-info {
+      display: flex;
+      flex-direction: column;
+      line-height: 30px;
+      padding: 20px 0;
+
+      h5 {
+        font-size: 16px;
+        font-weight: 700;
+        padding: 0 0 10px 0;
+      }
+
+      a {
+        @include link();
+        color: white;
+      }
+    }
+
+    .footer-get-in-touch {
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      align-items: flex-start;
+      padding: 20px 0;
+
+      h5 {
+        font-size: 16px;
+        font-weight: 700;
+        padding: 0 0 10px 0;
+      }
+
+      .input-group {
+        display: flex;
+        flex-direction: row;
+
+        input {
+          border: 0;
+          border-bottom-left-radius: 5px;
+          border-top-left-radius: 5px;
+          padding: 15px;
+        }
+
+        button {
+          background: #ffa62b;
+          color: white;
+          cursor: pointer;
+          padding: 5px;
+          border-bottom-right-radius: 5px;
+          border-top-right-radius: 5px;
+          border: 0;
+        }
+      }
+
+      p {
+        padding-top: 5px;
+        font-size: 10px;
+      }
     }
   }
 }
 
 #footer-section {
   background: #16697A;
-
 }
 
 .footer-lower-container {
@@ -121,30 +119,18 @@ footer {
   padding: 30px 45px;
 
   h6 {
-    font-family: $primary-font-family;
     font-size: 14px;
     color: white;
   }
 }
 
-
-@include sm {
-
-}
-
-@include md {
-
-}
-
 @include lg {
-
   .footer-container {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-    max-width: 80%;
-
   }
+
   .footer-upper-container {
     border-bottom: 1px solid #364067;
     flex-direction: row;
@@ -156,7 +142,6 @@ footer {
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-
   }
 
   #footer-section {
@@ -164,17 +149,10 @@ footer {
     justify-content: flex-start;
 
     .footer-lower-container {
-      width: 77%;
       margin: 0 auto;
       flex-direction: row;
       justify-content: flex-start;
       padding: 30px 0;
-
     }
   }
-}
-
-@include xl {
-
-
 }

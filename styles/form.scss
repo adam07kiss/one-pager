@@ -3,6 +3,7 @@
 .form-container {
   @include formContainerDesign;
   input, select{
+    color: $secondary-color;
     padding: 5%;
   }
   h3 {

@@ -1,153 +1,130 @@
 @import "variables";
 
-#contact {
-  padding: 0 30px;
-  height: 100%;
-}
-
-.contact-container {
-  background: url("/assets/contact-bg.png");
-  background-size: cover;
-  background-position: center;
-  overflow: hidden;
-}
-
-
-.contact-main-container {
-  min-width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0 auto;
-  flex-direction: column;
-  padding-top: 2.5rem;
-  padding-bottom: 3rem;
-  gap: 50px;
-
-}
-
-.contact-form-container {
-  @include formContainerDesign;
-  background: none;
-
-  input, select {
-    padding: 3%;
+.contact {
+  &-container {
+    background: url("/assets/contact-bg.png") center;
+    background-size: cover;
+    overflow: hidden;
   }
 
-  .contact-message-input {
-    height: 140px;
-    text-align: start;
+  &-main-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    flex-direction: column;
+    padding-top: 2.5rem;
+    padding-bottom: 3rem;
+    gap: 50px;
   }
 
-  .contact-title-container {
+  &-form-container {
+    @include formContainerDesign;
+    padding: 0;
+    background: none;
 
-    h5 {
-      @include textDesign-darkBlue;
-      font-size: 16px;
-      width: 16rem;
-
+    ::placeholder{
+      color: $placeholder-color;
     }
 
-    h2 {
-      @include textDesign-darkBlue;
-      font-size: 40px;
-      width: 16rem;
+    input, select {
+      padding: 3%;
+    }
 
+    .contact-message-input {
+      height: 140px;
+      text-align: start;
+    }
+
+    .contact-title-container {
+      h5 {
+        @include textDesign-darkBlue;
+        font-size: 16px;
+        width: 16rem;
+      }
+
+      h2 {
+        @include textDesign-darkBlue;
+        font-size: 40px;
+        width: 16rem;
+      }
     }
   }
-}
 
-.contact-form {
-  @include formDesign($gapSize: 20px);
-  background: none;
-
-
-  .contact-form-card-1, .contact-form-card-2 {
+  &-form {
     @include formDesign($gapSize: 20px);
     background: none;
-    order: 1;
-    text-overflow: inherit;
-    text-align: left;
 
+    .contact-form-card-1, .contact-form-card-2 {
+      @include formDesign($gapSize: 20px);
+      background: none;
+      order: 1;
+      text-overflow: inherit;
+      text-align: left;
+    }
+
+    .contact-message-input {
+      background: #f9f9f9;
+      box-sizing: border-box;
+      height: 140px;
+      width: 250px;
+      padding: 5%;
+      border: 1px solid #bdbdbd;
+      border-radius: 5px;
+      order: 2;
+      resize: none;
+    }
   }
 
-  .contact-message-input {
-    background: #f9f9f9;
-    box-sizing: border-box;
-    height: 140px;
-    width: 250px;
-    padding: 5%;
-    border: 1px solid #bdbdbd;
-    border-radius: 5px;
-    order: 2;
-    resize: none;
+  &-lower-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    line-height: 30px;
+
+    h3 {
+      @include textDesign-darkBlue;
+      font-size: 24px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    p {
+      @include textDesign-gray;
+      font-size: 14px;
+      padding-bottom: 40px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
-
-
-.contact-lower-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px 30px;
-  line-height: 30px;
-  width: 100%;
-
-
-  h3 {
-    @include textDesign-darkBlue;
-    font-size: 24px;
-    max-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-
-  }
-
-  p {
-    @include textDesign-gray;
-    font-size: 14px;
-    padding-bottom: 40px;
-    max-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-}
-
 
 @include sm {
   .contact-main-container {
     flex-direction: column;
   }
-
 }
 
 @include md {
   .contact-lower-container {
     text-align: center;
-
   }
 }
-
 
 @include lg {
   .contact-main-container {
     justify-content: left;
     flex-direction: row;
     align-items: start;
-    max-width: 80%;
-    min-width: 80%;
-
 
     h1 {
       text-align: left;
     }
-
     h3 {
       text-align: left;
     }
-
   }
 
   .contact-form-container {
@@ -156,24 +133,18 @@
     align-items: flex-start;
 
     .contact-title-container {
-
       h5 {
         width: 100%;
       }
-
       h2 {
         width: 100%;
-
       }
     }
   }
 
-
   .contact-form {
     .contact-form-card-1, .contact-form-card-2 {
       flex-direction: row;
-      min-width: 0;
-
     }
 
     .contact-message-input {
@@ -184,8 +155,7 @@
   .contact-lower-container {
     justify-content: space-between;
     flex-direction: row;
-    max-width: 80%;
-    min-width: 80%;
+    padding: 30px 0;
     margin-left: auto;
     margin-right: auto;
 
@@ -193,36 +163,14 @@
       text-align: left;
 
       h3 {
-        max-width: 100%;
       }
-
       p {
-        max-width: 100%;
         padding-bottom: 0;
       }
     }
   }
 
-
   .contact-container {
     flex-direction: column;
-    height: 100%;
-
   }
-
-
-}
-
-@include xl {
-
-  .contact-main-container {
-
-    max-width: 80%;
-    min-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    height: 100vh;
-  }
-
-
 }
