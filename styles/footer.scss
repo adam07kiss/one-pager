@@ -1,0 +1,180 @@
+@import "variables";
+
+.footer-main-container {
+  background: #252B42;
+  width: 100%;
+}
+
+footer {
+  padding: 0 30px;
+  height: 100%;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.footer-upper-container {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0;
+
+  h3 {
+    color: white;
+    font-family: $primary-font-family;
+  }
+
+  .footer-social-icons {
+    padding: 40px 0;
+
+    @include socialIcons();
+
+    .fa-square-facebook {
+      color: #335BF5;
+    }
+
+    .fa-instagram {
+      color: #E51F5A
+    }
+
+    .fa-twitter {
+      color: #21A6DF
+    }
+
+    .fa-youtube {
+      color: #E42F08
+    }
+  }
+}
+
+
+.footer-middle-container {
+
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 50px 0;
+
+
+  .footer-info {
+    font-family: $primary-font-family;
+    display: flex;
+    flex-direction: column;
+    line-height: 30px;
+
+    h5 {
+      font-size: 16px;
+      font-weight: 800;
+      padding: 0 0 10px 0;
+    }
+
+    a {
+      @include link($color: white);
+    }
+  }
+
+  .footer-get-in-touch {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    font-family: $primary-font-family;
+
+    h5 {
+      font-size: 16px;
+      font-weight: 800;
+      padding: 0 0 10px 0;
+    }
+
+    .input-group {
+      border: 1px solid lightgray;
+      border-radius: 5px;
+
+
+      button {
+        background: #ffa62b;
+        font-family: $primary-font-family;
+        color: white;
+        cursor: pointer;
+
+      }
+    }
+    p{
+      padding-top: 5px;
+      font-size: 10px;
+    }
+  }
+}
+
+#footer-section {
+  background: #16697A;
+
+}
+
+.footer-lower-container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: 30px 45px;
+
+  h6 {
+    font-family: $primary-font-family;
+    font-size: 14px;
+    color: white;
+  }
+}
+
+
+@include sm {
+
+}
+
+@include md {
+
+}
+
+@include lg {
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 80%;
+
+  }
+  .footer-upper-container {
+    border-bottom: 1px solid #364067;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-middle-container {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+
+  }
+
+  #footer-section {
+    display: flex;
+    justify-content: flex-start;
+
+    .footer-lower-container {
+      width: 77%;
+      margin: 0 auto;
+      flex-direction: row;
+      justify-content: flex-start;
+      padding: 30px 0;
+
+    }
+  }
+}
+
+@include xl {
+
+
+}
