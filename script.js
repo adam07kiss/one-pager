@@ -1,17 +1,12 @@
 const toggle = () => {
-    const nav = document.getElementById("navbar");
-    const header = document.getElementById("header-toggle");
+    const navbar = $('#navbar');
+    const headerToggle = $('#header-toggle');
 
-    console.log("done")
-    if (nav.className === "navbar") {
-        $(nav).addClass("responsive")
+    if(navbar.hasClass('show')) {
+        navbar.removeClass('show')
+        headerToggle.removeClass('bg-white')
     } else {
-        $(nav).removeClass("responsive")
-    }
-
-    if (header.className === "header-toggle") {
-        $(header).addClass("responsive")
-    } else {
-        $(header).removeClass("responsive")
+        navbar.addClass('show')
+        headerToggle.addClass('bg-white')
     }
 };

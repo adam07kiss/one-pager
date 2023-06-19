@@ -1,4 +1,3 @@
-
 $screen-sm-min: 576px;
 
 // Small tablets (portrait view)
@@ -9,6 +8,10 @@ $screen-lg-min: 992px;
 
 // Large tablets and desktops
 $screen-xl-min: 1440px;
+
+$primary-color: #FFA62B;
+
+$primary-font-family: "Montserrat", sans-serif;
 
 @mixin sm {
   @media (min-width: #{$screen-sm-min}) {
@@ -52,8 +55,6 @@ $screen-xl-min: 1440px;
   display: inline-grid;
 }
 
-
-
 @mixin sectionTitle() {
   font-size: 44px;
   color: #252B42;
@@ -69,7 +70,7 @@ $screen-xl-min: 1440px;
   padding: 20px 45px;
 }
 
-@mixin textDesign-darkBlue{
+@mixin textDesign-darkBlue {
   color: #252B42;
   font-family: $primary-font-family;
 }
@@ -81,13 +82,14 @@ $screen-xl-min: 1440px;
 
 $primary-font-family: system-ui;
 
-
 @mixin link($color: #ffa62b) {
-  font-family: $primary-font-family;
-  color: $color;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 600;
+  @mixin link() {
+    font-family: $primary-font-family;
+    color: $primary-color;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+  }
 }
 
 @mixin card-h6() {
@@ -112,8 +114,7 @@ $primary-font-family: system-ui;
   }
 }
 
-
-@mixin formDesign($gapSize: 5px){
+@mixin formDesign($gapSize: 5px) {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -130,9 +131,7 @@ $primary-font-family: system-ui;
   flex-grow: 0;
 }
 
-
-
-@mixin formContainerDesign(){
+@mixin formContainerDesign() {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -152,7 +151,7 @@ $primary-font-family: system-ui;
   }
 }
 
-@mixin socialIcons($color: #00A0C1){
+@mixin socialIcons($color: #00A0C1) {
   padding-bottom: 15px;
   color: $color;
   font-size: 24px;

@@ -1,16 +1,8 @@
-@import "variables";
-
-
 header {
   z-index: 1;
   margin: 0 auto;
   position: relative;
   padding: 20px 20px;
-  flex-direction: column;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-flow: row nowrap;
 
   a {
     color: #252B42;
@@ -20,23 +12,17 @@ header {
   }
 }
 
-
 .home-main-container {
-  background: url("/assets/background.png");
+  background-image: url("/assets/background.png");
   background-size: cover;
   background-position: center;
-
 }
 
 #home {
   padding: 0 30px;
-  height: 100%;
-
 }
 
-
 .home-container {
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -52,10 +38,7 @@ header {
   flex-direction: row;
   flex-flow: row wrap;
   justify-content: center;
-
   flex: 1 1 auto;
-  width: 100%;
-
 
   h1 {
     font-size: 46px;
@@ -77,12 +60,10 @@ header {
   .home-item-container {
     flex-direction: column;
   }
-
 }
 
 @include md {
   header {
-
     a {
       color: #252B42;
       text-decoration: none;
@@ -90,13 +71,6 @@ header {
       font-weight: bold;
     }
   }
-
-
-  .home-container {
-    max-width: 100%;
-    height: 100%;
-  }
-
 
   .home-item-container {
     flex-direction: column;
@@ -115,10 +89,7 @@ header {
       font-weight: 100;
       padding-bottom: 5%;
     }
-
   }
-
-
 }
 
 @include lg {
@@ -130,22 +101,13 @@ header {
     h1 {
       text-align: left;
     }
-
     h3 {
       text-align: left;
     }
-
-  }
-
-  .home-inner-container {
-    max-width: 80%;
   }
 
   .home-container {
-    max-width: 80%;
     flex-direction: row;
-    height: 100%;
-
   }
 
   .home-buttons {
@@ -155,22 +117,10 @@ header {
 }
 
 @include xl {
-
   .home-item-container {
     display: flex;
     flex-direction: column;
     flex-flow: column wrap;
     align-items: start;
-    width: 100%;
-  }
-
-  .home-inner-container {
-    max-width: 70%;
-  }
-
-  .home-container {
-    max-width: 80%;
-    height: 100vh;
-
   }
 }

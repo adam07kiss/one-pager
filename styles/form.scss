@@ -1,4 +1,4 @@
-@import "variables";
+@import 'variables';
 
 .form-container {
   @include formContainerDesign;
@@ -12,9 +12,13 @@
     font-weight: bold;
     padding-bottom: 5%;
   }
-
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
 }
 
 .form {
-  @include formDesign;
+  @include formDesign(15px);
 }
