@@ -19,10 +19,6 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-
-    h2 {
-
-    }
   }
 
   &-card-container {
@@ -101,8 +97,6 @@
 }
 
 @include lg {
-
-
   .why-choose-us-card-container {
     flex-direction: row;
     gap: 0;

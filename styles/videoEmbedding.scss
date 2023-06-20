@@ -32,23 +32,7 @@
   }
 }
 
-@include sm {
-
-  #video-embedding {
-
-  }
-}
-
 @include md {
-
-  #video-embedding {
-
-  }
-
-  .video-embedding-container {
-
-  }
-
   .video-embedding-video-container {
     aspect-ratio: auto;
     overflow: visible;
@@ -60,12 +44,7 @@
     height: 100%;
     background: linear-gradient(180deg, #F3F3F3 55vh, #16697A 45vh);
   }
-
-  .video-embedding-container {
-
-  }
 }
-
 
 @include xl {
   #video-embedding {

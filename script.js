@@ -2,7 +2,7 @@ const toggle = () => {
     const navbar = $('#navbar');
     const headerToggle = $('#header-toggle');
 
-    if(navbar.hasClass('show')) {
+    if (navbar.hasClass('show')) {
         navbar.removeClass('show')
         headerToggle.removeClass('bg-white')
     } else {
