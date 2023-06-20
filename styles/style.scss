@@ -10,6 +10,9 @@
 @import "contact";
 @import "footer";
 
+html{
+  scroll-behavior: smooth;
+}
 
 * {
   margin: 0;
@@ -79,19 +82,7 @@ ul.dashed {
   color: $placeholder-color;
 }
 
-
-//.why-choose-us-title-container, .video-embedding-title-container, .testimonials-title-container, .meet-our-team-title-container {
-//  h2 {
-//    @include ;
-//  }
-//
-//  p {
-//
-//  }
-//}
-
-
-.card-item-1, .card-item-2, .card-item-3, .testimonials-card-1, .testimonials-card-2, .testimonials-card-3 {
+.card-item, .testimonials-card {
   h6 {
     @include card-h6;
   }

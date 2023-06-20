@@ -32,8 +32,8 @@
       flex-direction: column;
       align-items: center;
       line-height: 30px;
-      width: 328px;
-      height: 373px;
+      width: 260px;
+      height: 320px;
       flex-basis: 32%;
 
       h5 {
@@ -50,7 +50,7 @@
         padding-bottom: 20px;
         //object-fit: contain;
         object-fit: cover;
-        width: 328px;
+        width: 100%;
         height: auto;
       }
 
@@ -64,16 +64,25 @@
   }
 }
 
+@include sm {
+  .meet-our-team-card-container {
+    .meet-our-team-card {
+      width: 328px;
+      height: 373px;
+    }
+  }
+}
+
 @include lg {
   .meet-our-team-card-container {
     flex-direction: row;
     gap: 0;
 
-    .meet-our-team-card{
+    .meet-our-team-card {
       width: auto;
       height: auto;
 
-      .meet-our-team-image{
+      .meet-our-team-image {
         width: 100%;
       }
     }

@@ -40,7 +40,7 @@
       border: 1px solid lightgrey;
       padding: 20px 20px 20px 30px;
       background: white;
-      width: 327px;
+      width: 260px;
       height: 244px;
       flex-basis: 32%;
 
@@ -92,6 +92,14 @@
   }
 }
 
+@include sm {
+  .testimonials-card-container {
+    .testimonials-card {
+      width: 327px;
+      height: 244px;
+    }
+  }
+}
 
 @include lg {
   .testimonials-card-container {

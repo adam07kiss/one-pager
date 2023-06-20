@@ -1,4 +1,4 @@
-$screen-sm-min: 576px;
+$screen-sm-min: 410px;
 
 // Small tablets (portrait view)
 $screen-md-min: 768px;
@@ -101,7 +101,7 @@ $primary-font-family: "Montserrat", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px;
+  padding: 30px;
   gap: 40px;
   background: #ffffff;
   border-radius: 10px;

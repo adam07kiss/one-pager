@@ -20,7 +20,7 @@
     flex-direction: column;
     justify-content: center;
 
-    h2{
+    h2 {
 
     }
   }
@@ -40,8 +40,8 @@
       line-height: 28px;
       background-color: #D9EDFF;
       border-radius: 10px;
-      width: 300px;
-      height: 360px;
+      width: 260px;
+      height: 340px;
       flex-basis: 32%;
 
       &-title {
@@ -78,7 +78,7 @@
         border: 1px solid #A9D6FF;
         width: 100%;
 
-        h6{
+        h6 {
           font-size: 14px;
           color: $secondary-color;
         }
@@ -91,8 +91,13 @@
   }
 }
 
-@include md {
-
+@include sm {
+  .why-choose-us-card-container {
+    .card-item {
+      width: 328px;
+      height: 389px;
+    }
+  }
 }
 
 @include lg {
@@ -106,7 +111,7 @@
       width: auto;
       height: auto;
 
-      .card-item-body{
+      .card-item-body {
         height: auto;
       }
     }
